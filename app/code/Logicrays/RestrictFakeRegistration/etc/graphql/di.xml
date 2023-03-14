@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<!-- 
+/**
+ * Logicrays
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Logicrays
+ * @package     Logicrays_RestrictFakeRegistration
+ * @copyright   Copyright (c) Logicrays (https://www.logicrays.com/)
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\StoreGraphQl\Model\Resolver\Store\StoreConfigDataProvider">
+        <arguments>
+            <argument name="extendedConfigData">
+                <item name="restrictfakeregistration_general_enable" xsi:type="string">restrictfakeregistration/general/enable</item>
+                <item name="restrictfakeregistration_general_restriction_type" xsi:type="string">restrictfakeregistration/general/restriction_type</item>
+                <item name="restrictfakeregistration_general_domains_list" xsi:type="string">restrictfakeregistration/general/domains_list</item>
+                <item name="restrictfakeregistration_general_domain_error" xsi:type="string">restrictfakeregistration/general/domain_error</item>
+                <item name="restrictfakeregistration_general_firstnamelimit" xsi:type="string">restrictfakeregistration/general/firstnamelimit</item>
+                <item name="restrictfakeregistration_general_firstname_error" xsi:type="string">restrictfakeregistration/general/firstname_error</item>
+                <item name="restrictfakeregistration_general_lastnamelimit" xsi:type="string">restrictfakeregistration/general/lastnamelimit</item>
+                <item name="restrictfakeregistration_general_lastname_error" xsi:type="string">restrictfakeregistration/general/lastname_error</item>
+                <item name="restrictfakeregistration_general_customer_name" xsi:type="string">restrictfakeregistration/general/customer_name</item>
+                <item name="restrictfakeregistration_general_name_error" xsi:type="string">restrictfakeregistration/general/name_error</item>
+                <item name="restrictfakeregistration_general_ipblacklist" xsi:type="string">restrictfakeregistration/general/ipblacklist</item>
+                <item name="restrictfakeregistration_general_ipblacklist_error" xsi:type="string">restrictfakeregistration/general/ipblacklist_error</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

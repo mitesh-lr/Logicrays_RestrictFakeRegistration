@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * Logicrays
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Logicrays
+ * @package     Logicrays_RestrictFakeRegistration
+ * @copyright   Copyright (c) Logicrays (https://www.logicrays.com/)
+ */ 
+ -->
+ 
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <restrictfakeregistration>
+            <general>
+                <enable>1</enable>
+                <restriction_type>1</restriction_type>
+                <domains_list>test.com,testing.com</domains_list>
+                <domain_error>Sorry! you can not use this domain for Registration.</domain_error>
+                <firstnamelimit>10</firstnamelimit>
+                <firstname_error>You Are not Allowed Enter more then 10 Characters in First Name.</firstname_error>
+                <lastnamelimit>10</lastnamelimit>
+                <lastname_error>You Are not Allowed Enter more then 10 Characters in Last Name.</lastname_error>
+                <customer_name>test, customer, guest, user, dummy,@,,,,</customer_name> 
+                <name_error>Sorry! you can not use such words in your Name.</name_error>
+                <ipblacklist>103.70.204.194, 182.73.56.130, 37.130.229.149</ipblacklist>
+                <ipblacklist_error>Your IP is Blacklisted By the Store Administrator.</ipblacklist_error>
+            </general>   
+        </restrictfakeregistration>
+    </default>
+</config>

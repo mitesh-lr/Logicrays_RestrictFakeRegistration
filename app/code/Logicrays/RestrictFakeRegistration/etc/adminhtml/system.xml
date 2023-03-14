@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * Logicrays
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Logicrays
+ * @package     Logicrays_RestrictFakeRegistration
+ * @copyright   Copyright (c) Logicrays (https://www.logicrays.com/)
+ */ 
+ -->
+ 
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="restrictfakeregistration" translate="label" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Restrict Fake Registration</label>
+            <tab>logicrays</tab>
+            <resource>Logicrays_RestrictFakeRegistration::restrict_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field> 
+                <field id="restriction_type" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Domain Restriction Type</label>
+                    <depends>
+                        <field id="enable">1</field>   
+                    </depends>
+                    <source_model>Logicrays\RestrictFakeRegistration\Model\Config\Source\DomainType</source_model>
+                </field>
+                <field id="domains_list" translate="label" type="textarea" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Domains List</label>
+                    <depends>
+                        <field id="enable">1</field>   
+                    </depends>
+                    <validate>required-entry</validate>
+                    <comment>
+                        Enter comma separated domain names.
+                        Example:test.com,testing.com
+                    </comment>
+                </field>
+                <field id="domain_error" translate="label comment" type="text" sortOrder="40" canRestore="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Domain Restriction Message</label>
+                    <depends>
+                        <field id="enable">1</field>   
+                    </depends>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="firstnamelimit" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enter No. for First Name Maximum Characters</label>
+                    <depends>
+                        <field id="enable">1</field>   
+                    </depends>
+                </field>
+                <field id="firstname_error" translate="label comment" type="text" canRestore="1" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>First Name Limit Restriction Message</label>
+                    <depends>
+                        <field id="enable">1</field>   
+                    </depends>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="lastnamelimit" translate="label comment" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enter No. for Last Name Maximum Characters</label>
+                    <depends>
+                        <field id="enable">1</field>   
+                    </depends>
+                </field>    
+                 <field id="lastname_error" translate="label comment" type="text" canRestore="1" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Last Name Limit Restriction Message</label>
+                    <depends>
+                        <field id="enable">1</field>   
+                    </depends>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="customer_name" translate="label" type="textarea" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Word Exclusion list for Customer Name</label>
+                    <depends>
+                        <field id="enable">1</field>   
+                    </depends>
+                    <validate>required-entry</validate>
+                    <comment>
+                        Enter words that you want to exclude separated by a comma.
+                        Example:-dummy,@,mango etc.
+                    </comment>
+                </field>
+                <field id="name_error" translate="label comment" type="text" canRestore="1" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Word Exclusion Restriction Message</label>
+                    <depends>
+                        <field id="enable">1</field>   
+                    </depends>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="ipblacklist" translate="label" type="textarea" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>IP Blacklist</label>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                    <comment>
+                        Enter IP's separated by a comma.
+                        Example:-127.0.0.1,128.1.1.0,etc
+                    </comment>
+                </field>
+                <field id="ipblacklist_error" translate="label comment" type="text" canRestore="1" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>IP Blacklist Restriction Message</label>
+                    <depends>
+                        <field id="enable">1</field>   
+                    </depends>
+                    <validate>required-entry</validate>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

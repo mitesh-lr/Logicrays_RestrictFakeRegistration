@@ -1,0 +1,14 @@
+type StoreConfig {
+    restrictfakeregistration_general_enable : String @doc(description: "fetch value of module enable or disable"),
+    restrictfakeregistration_general_restriction_type : String @doc(description: "fetch value of domain restirct type"),
+    restrictfakeregistration_general_domains_list : String @doc(description: "fetch value of domain list"),
+    restrictfakeregistration_general_domain_error : String @doc(description: "fetch value of domain error message"),
+    restrictfakeregistration_general_firstnamelimit : String @doc(description: "fetch value of firstname limit"),
+    restrictfakeregistration_general_firstname_error : String @doc(description: "fetch value of firstname limit error message"),
+    restrictfakeregistration_general_lastnamelimit : String @doc(description: "fetch value of lastname limit"),
+    restrictfakeregistration_general_lastname_error :String @doc(description: "fetch value of lastname limit error message"),
+    restrictfakeregistration_general_customer_name : String @doc(description: "fetch value of customer name"),
+    restrictfakeregistration_general_name_error : String @doc(description: "fetch value of customer name error message"),
+    restrictfakeregistration_general_ipblacklist : String @doc(description: "fetch value of ip black list"),
+    restrictfakeregistration_general_ipblacklist_error : String @doc(description: "fetch value of ip black list error"),
+}
